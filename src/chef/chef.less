@@ -1,0 +1,214 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.chef {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  
+  &-wrapper {
+    max-width: 1820px;
+    width: 100%;
+    height: 696px;
+    margin: 0 auto;
+    background-image: url("../../assets/images/chief_bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &__logo {
+    max-width: 645px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../../assets/images/chef_branches.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: "PT Serif",serif;
+
+    &__title {
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      margin: 0;
+      text-align: center;
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 0.5rem;
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: #a7a99a;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__article {
+    position: absolute;
+    max-width: 1170px;
+    max-height: 542px;
+    width: 100%;
+    left: 50%;
+    bottom: -171px;
+    transform: translateX(-50%);
+    z-index: 500;
+
+    .screen-lg({
+      width: 90%;
+    });
+
+    .screen-xs({
+      max-height: 600px;
+    });
+
+    &__image-wrapper {
+      max-width: 585px;
+      width: 100%;
+
+      > img {
+        .screen-lg({
+          width: 100%;
+        });
+      }
+
+      .screen-lg({
+        max-width: 500px;
+        width: 100%;
+      });
+
+      .screen-xs({
+        display: none;
+      });
+
+      .screen-sm({
+        display: none;
+      });
+
+      .screen-md({
+      display: none;
+    });
+    }
+    
+    &__content {
+      max-width: 585px;
+      width: 100%;
+      background-color: #fff;
+      padding: 5.875rem 5.25rem 4.5625rem 5.4375rem!important;
+
+      .screen-xs({
+        padding: 2.875rem 2.25rem 2.5625rem 2.4375rem!important;
+      });
+
+      .screen-sm({
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.875rem 2.25rem 2.5625rem 2.4375rem!important;
+      });
+
+      .screen-md({
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.875rem 2.25rem 2.5625rem 2.4375rem!important;
+      });
+
+      .screen-lg({
+        padding: 1.875rem 1.25rem 1.5625rem 1.4375rem!important;
+      });
+
+      &__quote {
+        position: absolute;
+        left: 12.5%;
+        top: 5.2%;
+        font-family: "PT Serif",serif;
+        font-size: 180px;
+        color: #e6e6e1;
+        z-index: 4;
+
+        .screen-xs({
+          position: fixed;
+          left: 5%;
+          top: -5%;
+        });
+
+        .screen-sm({
+          position: fixed;
+          left: 12%;
+          top: -5%;
+        });
+
+        .screen-md({
+          position: fixed;
+          left: 22%;
+          top: -5%;
+        });
+
+        .screen-lg({
+          position: fixed;
+          left: 48%;
+          top: -5%;
+        });
+      }
+
+      &__text {
+        width: 100%;
+        position: relative;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        color: #929292;
+        z-index: 70;
+      }
+
+      &__line {
+        display: inline-block;
+        content: '';
+        height: 2px;
+        width: 110px;
+        background-color: @accent-color;
+        margin-top: 1.1875rem;
+      }
+
+      &__name {
+        margin-top: 2.125rem;
+        font-size: 0.875rem;
+        font-family: "PT Serif", serif;
+        color: #929292;
+
+        &_accent {
+          font-weight: 700;
+          color: @accent-color;
+          font-size: 1.3rem;
+        }
+      }
+
+      &__btn {
+        min-height: 60px;
+        max-width: 242px;
+        width: 100%;
+        background-color: @about-button-color;
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: #ffffff;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 0.085rem;
+        margin-top: 2.75rem;
+      }
+    }
+  }
+}

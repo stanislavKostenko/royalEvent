@@ -1,0 +1,117 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+.staff {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  
+  &__logo {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: @staff-bgc;
+    padding-top: 171px;
+
+    &-wrapper {
+      max-width: 645px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 6.625rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-image: url("../../assets/images/blog_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      font-family: "PT Serif",serif;
+    }
+
+    &__title {
+      color: @accent-color;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: @reviews-sub-title-color;
+      margin-top: 0.7rem;
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: @accent-color;
+      margin-top: 2.2rem;
+    }
+
+  }
+
+  &-wrapper {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: @staff-bgc;
+    padding-top: 4rem;
+    padding-bottom: 6.875rem;
+  }
+
+  &__members-wrapper {
+    max-width: 1142px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .screen-md({
+      justify-content: space-around;
+    });
+  }
+
+  &__members {
+    max-width: 242px;
+    width: 100%;
+
+    .screen-xs({
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    });
+    .screen-sm({
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    });
+
+    .screen-md({
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    });
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+
+      &__name {
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: @accent-color;
+      }
+
+      &__position {
+        font-family: "PT Serif", serif;
+        font-size: 0.875rem;
+        color: @staff-members-position;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}

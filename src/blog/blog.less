@@ -1,0 +1,157 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+.blog {
+  max-width: 1920px;
+  width: 100%;
+
+  &__logo {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-wrapper {
+      max-width: 645px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 6.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-image: url("../../assets/images/blog_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      font-family: "PT Serif",serif;
+      padding-bottom: 3.8125rem;
+    }
+
+    &__title {
+      color: @accent-color;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: @reviews-sub-title-color;
+      margin-top: 0.5rem;
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: @accent-color;
+      margin-top: 2rem;
+    }
+  }
+
+  &__articles {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .screen-md({
+      margin: 0 auto;
+      justify-content: space-around;
+    });
+
+
+
+    &__item {
+      max-width: 369px;
+      width: 100%;
+
+      .screen-xs({
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      });
+
+      .screen-sm({
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      });
+
+      .screen-md({
+        margin-bottom: 1rem;
+      });
+
+      .screen-lg({
+        padding: 0.5rem!important;
+      });
+
+      &__image {
+        max-width: 369px;
+        width: 100%;
+      }
+
+      &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "PT Serif",serif;
+
+        &__date {
+          margin-top: 1.9rem;
+          color: @accent-color;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.085rem;
+          font-size: 0.875rem;
+        }
+
+        &__title {
+          width: 95%;
+          margin: 0 auto;
+          text-align: center;
+          color: @blog-articles-title;
+          font-weight: 700;
+          font-size: 1.375rem;
+          margin-top: 1rem;
+        }
+
+        &__line {
+          display: inline-block;
+          content: '';
+          height: 2px;
+          width: 110px;
+          background-color: @accent-color;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  &__button {
+    max-width: 242px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 6.875rem;
+
+    > .col {
+      height: 60px;
+      margin-top: 2.875rem;
+    }
+
+    &__btn {
+      min-height: 60px;
+      max-width: 242px;
+      width: 100%;
+      background-color: @about-button-color;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+  }
+}

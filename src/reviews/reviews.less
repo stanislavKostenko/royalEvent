@@ -1,0 +1,233 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+.reviews {
+  max-width: 1920px;
+  width: 100%;
+
+  &__logo {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: @reviews-bgc;
+
+    &-wrapper {
+      max-width: 645px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 6.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-image: url("../../assets/images/reviews_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      font-family: "PT Serif", serif;
+    }
+
+    &__title {
+      color: @accent-color;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: @reviews-sub-title-color;
+      margin-top: 0.5rem;
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: @accent-color;
+      margin-top: 2rem;
+    }
+  }
+  
+  &__slider {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: @reviews-bgc;
+    padding-bottom: 6.875rem;
+    
+    &-wrapper {
+      position: relative;
+      max-width: 1167px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 6.875rem;
+      background-image: radial-gradient(ellipse, #f5f5f3, #ffffff);
+      min-height: 260px;
+    }
+    
+    &__avatar {
+      position: absolute;
+      left: 50%;
+      top: -56.5px;
+      transform: translateX(-50%);
+      width: 113px;
+      height: 113px;
+      background-color: @reviews-bgc;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      z-index: 10;
+
+      > img {
+        width: 95px;
+        height: 95px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 1.5s;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__circle {
+      width: 65px;
+      height: 65px;
+      background-color: @reviews-bgc;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      font-size: 0.7rem;
+      color: @accent-color;
+
+      .screen-xs({
+        background-color: #fff;
+      });
+
+      .screen-sm({
+        background-color: #fff;
+      });
+
+      .screen-md({
+        background-color: #fff;
+      });
+
+      .screen-lg({
+        background-color: #fff;
+      });
+
+      &:first-child {
+        position: absolute;
+        left: -37.5px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        > i {
+          position: absolute;
+          left: 65%;
+          top: 50%;
+          transform: translate(-65%, -50%);
+        }
+      }
+
+      &:last-child {
+        position: absolute;
+        right: -37.5px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        > i {
+          position: absolute;
+          right: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &__review {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      margin: 0 auto;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__text {
+        position: absolute;
+        width: 75%;
+        text-align: center;
+        font-family: "PT Serif",serif;
+        font-weight: 700;
+        color: @accent-color;
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 1.5s;
+
+        .screen-xs({
+          font-size: 4vw;
+        });
+        .screen-sm({
+          font-size: 3vw;
+        });
+
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__author {
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__text {
+        position: absolute;
+        font-family: "PT Serif",serif;
+        font-size: 0.875rem;
+        color: @reviews-slider-author;
+        opacity: 0;
+        visibility: hidden;
+        transition: 1.5s;
+
+        .screen-xs({
+          font-size: 4vw;
+        });
+
+        .screen-sm({
+          font-size: 2.5vw;
+        });
+
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+.footer {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  &__circle-wrapper {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    max-width: 130px;
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    &__content {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      height: 50px;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "PT Serif",serif;
+      font-weight: 700;
+      color: @accent-color;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+
+      &:hover {
+        text-decoration: none;
+        color: @accent-color;
+      }
+
+      > i {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4.25rem;
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 4.375rem!important;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: @accent-color;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+
+      &__phone {
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+      }
+    }
+
+    &__logo {
+      max-width: 275px;
+      width: 100%;
+      background-image: url("../../assets/images/branches.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &__event {
+        font-family: 'Yellowtail', cursive;
+        font-size: 2.79875rem;
+        line-height: 1.1rem;
+        color: @info-event-color;
+
+        &:first-child {
+          position: relative;
+          top: 0.9rem;
+          left: -0.3rem;
+        }
+
+        &:nth-child(2) {
+          position: relative;
+          left: 0;
+        }
+      }
+
+      &__title {
+        position: relative;
+        bottom: 0.5rem;
+        font-family: "PT Serif", serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: @accent-color;
+        text-transform: uppercase;
+        letter-spacing: 0.085rem;
+      }
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-self: center;
+      padding-left: 4.375rem!important;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: @accent-color;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+  }
+
+  &__social {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 3.375rem;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icons {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      background-color: #a7a99a;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin: 0 0.25rem;
+
+      &__link {
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        &:hover {
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__copyrights {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+
+    &-wrapper {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__content {
+      text-align: center;
+      font-family: "PT Serif", serif;
+      font-size: 0.875rem;
+      color: #929292;
+
+      &__text {
+
+        > a {
+          text-decoration: underline;
+          color: #929292;
+        }
+      }
+    }
+  }
+}

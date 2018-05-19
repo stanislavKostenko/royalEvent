@@ -1,0 +1,199 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+.about {
+  max-width: 1920px;
+  width: 100%;
+  padding-bottom: 6.44rem;
+
+  &__logo {
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-wrapper {
+      min-height: 130px;
+      margin-top: 100px;
+      background-image: url("../../assets/images/about_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__title {
+      font-family: "PT Serif", serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: @accent-color;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__greeting {
+      text-align: center;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 2.1875rem;
+      color: @about-greeting-color;
+      margin-top: 1rem;
+    }
+
+    &__line {
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: @accent-color;
+      margin-top: 3.125rem;
+    }
+  }
+  &__pages {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.875rem;
+
+    .screen-sm({
+      max-width: 80%;
+      justify-content: center;
+    });
+
+    .screen-xs({
+      max-width: 80%;
+      justify-content: center;
+    });
+    
+    &__events {
+      position: relative;
+      min-height: 473px;
+      max-width: 370px;
+      width: 100%;
+      background-image: url("../../assets/images/pages_events.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+
+      .screen-lg({
+        max-width: 32%;
+      });
+
+      .screen-md({
+        max-width: 32%;
+      });
+
+      &:hover {
+        transition: 1.2s;
+        transform: scale(1.02);
+      }
+    }
+
+    &__menu {
+      position: relative;
+      min-height: 473px;
+      max-width: 370px;
+      width: 100%;
+      background-image: url("../../assets/images/pages_menu.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+
+      .screen-lg({
+        max-width: 32%;
+      });
+
+      .screen-md({
+        max-width: 32%;
+      });
+
+      .screen-sm({
+        margin-top: 1rem;
+      });
+
+      .screen-xs({
+        margin-top: 1rem;
+      });
+
+      &:hover {
+        transition: 1.2s;
+        transform: scale(1.02);
+      }
+    }
+
+    &__venues {
+      position: relative;
+      min-height: 473px;
+      max-width: 370px;
+      width: 100%;
+      background-image: url("../../assets/images/pages_venues.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+
+      .screen-lg({
+        max-width: 32%;
+      });
+
+      .screen-md({
+        max-width: 32%;
+      });
+
+      .screen-sm({
+        margin-top: 1rem;
+      });
+
+      .screen-xs({
+        margin-top: 1rem;
+      });
+
+      &:hover {
+        transition: 1.2s;
+        transform: scale(1.02);
+      }
+    }
+
+    &__title {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Yellowtail', cursive;
+      font-size: 2.8125rem;
+      line-height: 2rem;
+      color: #ffffff;
+    }
+
+    &__chevron {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      color: @accent-color;
+
+      .screen-lg({
+        max-width: 32%;
+      });
+    }
+  }
+
+  &__button {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+
+    &__btn {
+      min-height: 60px;
+      background-color: @about-button-color;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      color: #ffffff;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+  }
+}

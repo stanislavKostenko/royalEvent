@@ -1,0 +1,84 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.book {
+  max-width: 1920px;
+  width: 100%;
+  
+  &-wrapper {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 696px;
+    background-image: url("../../assets/images/book_bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &__logo {
+    max-width: 645px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../../assets/images/book_logo.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 12.06rem;
+    font-family: "PT Serif",serif;
+
+    &__title {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      text-align: center;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 3.125rem;
+      margin: 0;
+      margin-top: 0.5rem;
+
+      .screen-xs({
+        width: 90%;
+        font-size: 7vw;
+      });
+
+      .screen-sm({
+        width: 90%;
+        font-size: 7vw;
+      });
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: #ffffff;
+      margin-top: 3rem;
+    }
+  }
+
+  &__btn {
+    min-height: 60px;
+    max-width: 242px;
+    margin-top: 3.875rem;
+    width: 100%;
+    background-color: @about-button-color;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.085rem;
+  }
+}

@@ -1,0 +1,251 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.gallery {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+
+  &__logo {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-wrapper {
+      max-width: 645px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-image: url("../../assets/images/gallery_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      font-family: "PT Serif",serif;
+      margin-top: 6.875rem;
+    }
+
+    &__title {
+      color: @accent-color;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+    }
+
+    &__sub-title {
+      text-align: center;
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: @reviews-sub-title-color;
+      margin-top: 0.7rem;
+    }
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: @accent-color;
+      margin-top: 1.875rem;
+    }
+  }
+
+  &__list {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.875rem;
+
+    .screen-xs({
+      max-width: 100vw;
+      width: 100%;
+    });
+
+    .screen-sm({
+      max-width: 100vw;
+      width: 100%;
+    });
+
+    .screen-md({
+      max-width: 100vw;
+      width: 100%;
+    });
+
+    &-item {
+      max-width: 593px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .screen-xs({
+        max-width: 100vw;
+        width: 90%;
+        margin: 0 auto;
+      });
+
+      .screen-sm({
+        max-width: 100vw;
+        width: 90%;
+        margin: 0 auto;
+      });
+
+      .screen-md({
+        max-width: 100vw;
+        width: 90%;
+        margin: 0 auto;
+      });
+
+      .screen-lg({
+        width: 30%;
+      });
+
+
+
+      &__image-wrapper {
+        margin: 0 auto;
+
+        > img {
+          width: 100%;
+          padding: 0.5rem;
+
+          .screen-xs({
+            width: 100%;
+            padding: 0.5rem;
+          });
+
+          .screen-sm({
+            width: 100%;
+            padding: 0.5rem;
+          });
+
+          .screen-md({
+            width: 100%;
+            padding: 0.5rem;
+          });
+
+          .screen-lg({
+            width: 100%;
+          });
+
+          .screen-xlg({
+            width: 95%;
+            height: 43vh;
+          });
+        }
+
+        .screen-xs({
+          max-width: 90vw;
+          width: 100%;
+        });
+
+        .screen-sm({
+          max-width: 90vw;
+          width: 100%;
+        });
+
+        .screen-md({
+          max-width: 90vw;
+          width: 100%;
+        });
+
+        .screen-lg({
+          width: 90%;
+        });
+
+        .screen-xlg({
+          width: 100%;
+        });
+
+        &_big {
+          margin: 0 auto;
+          width: 100%;
+
+          > img {
+
+            width: 100%;
+            padding: 0.5rem;
+            .screen-xs({
+              width: 100%;
+              padding: 0.5rem 0.5rem 0;
+            });
+
+            .screen-sm({
+              width: 100%;
+              padding: 0.5rem 0.5rem 0;
+            });
+
+            .screen-md({
+              width: 100%;
+              padding: 0.5rem 0.5rem 0;
+            });
+
+            .screen-lg({
+              width: 100%;
+            });
+
+            .screen-xlg({
+              width: 100%;
+            });
+          }
+
+          .screen-xs({
+            max-width: 90vw;
+            width: 100%;
+          });
+
+          .screen-sm({
+            max-width: 90vw;
+            width: 100%;
+          });
+
+          .screen-lg({
+            width: 90%;
+          });
+
+          .screen-xlg({
+            width: 100%;
+          });
+
+          .screen-md({
+            width: 100%;
+          });
+        }
+      }
+    }
+  }
+
+  &__button {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 6.25rem;
+    &-wrapper {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__btn {
+      min-height: 60px;
+      max-width: 242px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: @about-button-color;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+      margin-top: 3.625rem;
+    }
+  }
+}

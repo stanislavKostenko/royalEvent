@@ -1,0 +1,218 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.services {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  padding-bottom: 6.875rem;
+
+  &__logo {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__line {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 110px;
+      background-color: #a7a99a;
+      margin-top: 3rem;
+    }
+
+    &-wrapper {
+      max-width: 350px;
+      min-height: 180px;
+      margin: 0 auto;
+      background-image: url("../../assets/images/services_branches.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 6.52rem;
+      font-family: "PT Serif",serif;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: @accent-color;
+      text-transform: uppercase;
+    }
+
+    &__sub-title {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.1875rem;
+      color: @services-sub-title-color;
+    }
+  }
+
+  &-wrapper {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3.75rem;
+
+    .screen-md({
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    });
+  }
+
+  &__list {
+    max-width: 360px;
+    width: 100%;
+    max-height: 450px;
+
+    .screen-xs({
+      margin: 0 auto;
+    });
+
+    .screen-sm({
+      margin: 0 auto;
+    });
+
+
+    &-item-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .screen-xs({
+        justify-content: center;
+      });
+
+      .screen-sm({
+        justify-content: center;
+      });
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+        text-align: right;
+        padding-right: 2rem;
+        align-items: flex-end;
+      }
+
+      &:last-child {
+        padding-left: 2rem;
+      }
+
+      &__title {
+        font-family: "PT Serif",serif;
+        font-weight: 700;
+        color: @accent-color;
+        font-size: 1.125rem;
+        letter-spacing: 0.07rem;
+        text-transform: uppercase;
+        line-height: 1rem;
+      }
+
+      &__text {
+        font-family: "PT Serif",serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: @services-list-text-color;
+        line-height: 1.5rem;
+        margin-top: 1.6rem;
+        margin-bottom: 2.4375rem;
+
+      }
+
+      &__line {
+        display: inline-block;
+        content: '';
+        height: 2px;
+        width: 110px;
+        background-color: #a7a99a;
+        margin-top: 1.375rem;
+      }
+
+      &__number {
+        color: #eae7e0;
+        font-family: "PT Serif",serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 2rem;
+
+        &:first-child {
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &__more {
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .screen-sm({
+      justify-content: center;
+      margin: 0 auto;
+    });
+
+    .screen-lg({
+      width: 30%;
+    });
+
+    &__image {
+      width: 100%;
+      padding: 0 0.9rem;
+
+      .screen-xs({
+        display: none;
+      });
+
+      > img {
+        .screen-lg({
+          width: 100%;
+        });
+      }
+
+    }
+
+    &__btn {
+      min-height: 60px;
+      max-width: 242px;
+
+      margin-top: 3rem;
+      width: 100%;
+      background-color: @about-button-color;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.085rem;
+
+      .screen-xs({
+        margin: 4rem 0;
+      });
+
+      .screen-sm({
+        margin-bottom: 2rem;
+      });
+
+      .screen-md({
+        margin-bottom: 2rem;
+      });
+    }
+  }
+}
