@@ -20,7 +20,7 @@ if (env === "production") {
 }
 
 if (env === "publish") {
-  config = prodConfig(config, path.normalize(path.join(_path + "/docs")));
+  config = prodConfig(config, path.normalize(path.join(_path + "/build")));
 }
 
 
